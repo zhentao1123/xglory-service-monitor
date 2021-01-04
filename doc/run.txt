@@ -1,0 +1,2 @@
+#flask_script方式带参启动
+python main.py runserver -d -r -h 0.0.0.0 -p 80
