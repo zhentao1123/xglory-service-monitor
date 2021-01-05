@@ -1,10 +1,10 @@
 #开发环境直接启动
-python main.py
+python run.py
 
 #开发环境flask_script方式带参启动
-python main.py runserver -d -r -h 0.0.0.0 -p 8080
+python run_manager.py runserver -d -r -h 0.0.0.0 -p 80
 
-#生产环境下python main.py方式启动
-gunicorn -w 4 -b 0.0.0.0:8080 main:app
+#生产环境下python main.py方式启动(对应run_gunicorn.py中的app变量)
+gunicorn -w 4 -b 0.0.0.0:80 run_gunicorn:app
 
 #生产环境推荐supervisor管理项目
